@@ -21,7 +21,7 @@ about:
 
 <body style="font-family: 'Calibri', sans-serif;">
 
-I am a first-year PhD student in Economics at Bocconi University. 
+I am a second-year PhD student in Economics at Bocconi University. 
 
 I am interested in applied microeconomics, particularly education and development economics. 
 
