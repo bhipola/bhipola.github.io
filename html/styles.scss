@@ -1,104 +1,327 @@
 /*-- scss:defaults --*/
 
-/* From https://github.com/andrewheiss/ath-quarto/blob/main/html/ath.scss */
+/* Warm, minimal academic theme
+   Palette: cream background, terracotta accent, warm charcoal text */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;700&display=swap');
 
 $white:    #ffffff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #373a3c !default;
-$gray-900: #212529 !default;
-$black:    #000000 !default;
+$gray-100: #FBF8F4 !default;   // page background (warm cream)
+$gray-200: #F2ECE3 !default;   // subtle panel bg
+$gray-300: #E6DDCF !default;   // borders
+$gray-400: #D8CBB8 !default;
+$gray-500: #B9A88F !default;
+$gray-600: #8C7B68 !default;   // muted secondary text
+$gray-700: #6B5C4C !default;
+$gray-800: #4A3F35 !default;
+$gray-900: #362D25 !default;   // near-black warm text
+$black:    #241E18 !default;
 
-$blue:    #2780e3 !default;
-$indigo:  #6610f2 !default;
-$purple:  #170C3A !default;
-$pink:    #A52C60 !default;
-$red:     #CF4446 !default;
-$orange:  #EE6A24 !default;
-$light-orange:  #FB9E07 !default;
-$yellow:  #F6D645 !default;
-$green:   #118230 !default;
-$teal:    #068194 !default;
-$cyan:    #3093CF !default;
+// Core accent: terracotta
+$terracotta:      #C1652F !default;
+$terracotta-dark: #A4501F !default;
+$terracotta-light:#E8A672 !default;
+$sage:            #7C8B6F !default;   // quiet complementary green
+$rust:            #9C4A32 !default;
 
-$blue1: #4A55A2 !default;
-$blue2: #7895CB !default;
-$blue3: #A0BFE0 !default;
-$blue4: #C5DFF8 !default;
+$blue:    $terracotta !default;
+$indigo:  $terracotta-dark !default;
+$purple:  $rust !default;
+$pink:    $terracotta-light !default;
+$red:     #B23B2E !default;
+$orange:  $terracotta !default;
+$light-orange: $terracotta-light !default;
+$yellow:  #D9A441 !default;
+$green:   $sage !default;
+$teal:    #6E9083 !default;
+$cyan:    #7C9A9C !default;
 
-
-$primary:   $blue2!default;
-$secondary: $blue3 !default;
-$success:   $green !default;
-$info:      $cyan !default;
-$warning:   $orange !default;
+$primary:   $terracotta !default;
+$secondary: $gray-600 !default;
+$success:   $sage !default;
+$info:      $teal !default;
+$warning:   $yellow !default;
 $danger:    $red !default;
-$light:     $gray-400 !default;
-$dark:      $black !default;
+$light:     $gray-200 !default;
+$dark:      $gray-900 !default;
 
-//fonts
-.about-block {
-  font-family:  'Calibri', sans-serif;
- 
-}
+$body-bg:    $gray-100 !default;
+$body-color: $gray-900 !default;
 
-h1, h2, h3 {
-  font-family:  "Georgia", serif;
-  font-weight: bold;
-}
-
-nav ul li a {
-  font-family:  'Calibri', sans-serif;
-  font-size: 20px;
-  /* Other CSS properties for the navigation links */
-}
-
-body {
-  font-family:  'Calibri', sans-serif;
- 
-}
-
-
+// Fonts
+$font-family-serif:  "Fraunces", Georgia, serif !default;
+$font-family-sans:   "Karla", -apple-system, "Segoe UI", sans-serif !default;
+$font-family-base:   $font-family-sans !default;
+$headings-font-family: $font-family-serif !default;
+$headings-font-weight: 600 !default;
+$headings-color: $gray-900 !default;
 
 // Links
-$link-color: $primary !default;
+$link-color: $terracotta !default;
 $link-decoration: none !default;
-$link-hover-color: $red !default;
+$link-hover-color: $terracotta-dark !default;
 $link-hover-decoration: underline !default;
 
+// Navbar
+$navbar-bg: $gray-100 !default;
+$navbar-fg: $gray-900 !default;
+$navbar-hl: $terracotta !default;
+
 // Footer
-$footer-bg: $gray-900 !default;
-$footer-fg: $gray-300 !default;
+$footer-bg: $gray-200 !default;
+$footer-fg: $gray-700 !default;
 
 // Inline code
 $code-bg: $gray-200 !default;
-$code-color: $gray-900 !default;
+$code-color: $rust !default;
 
 // TOC
-$toc-color: $orange;
-$toc-font-size: 1em;
+$toc-color: $terracotta;
+$toc-font-size: 0.9em;
 
 // Code copy
-$btn-code-copy-color-active: $orange !default;
+$btn-code-copy-color-active: $terracotta !default;
 
 
 /*-- scss:rules --*/
 
+body {
+  font-family: $font-family-sans;
+  color: $gray-900;
+  line-height: 1.7;
+}
 
+h1, h2, h3, h4 {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: $gray-900;
+}
+
+h1.title {
+  font-weight: 500;
+  font-size: 2.6em;
+  margin-bottom: 0.2em;
+}
+
+h3 {
+  border-bottom: 1px solid $gray-300;
+  padding-bottom: 0.35em;
+  margin-top: 1.6em;
+}
+
+a {
+  transition: color 0.15s ease;
+}
+
+// Navbar — quiet, generous letter-spacing, subtle bottom rule instead of a bar
+.navbar {
+  background-color: $gray-100 !important;
+  border-bottom: 1px solid $gray-300;
+  box-shadow: none !important;
+}
+
+.navbar-title {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-size: 1.35em;
+  color: $gray-900 !important;
+}
+
+.navbar .nav-link,
+nav ul li a {
+  font-family: $font-family-sans;
+  font-size: 0.95em;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $gray-700 !important;
+  padding: 0.4em 0.9em !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: $terracotta !important;
+}
+
+.navbar .bi {
+  color: $gray-700;
+}
+.navbar .bi:hover {
+  color: $terracotta;
+}
+
+// About / trestles block
+.about-entity {
+  img {
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(74, 63, 53, 0.18);
+    border: 4px solid $white;
+  }
+}
+
+.about-block,
+.about-links {
+  font-family: $font-family-sans;
+}
+
+.about-links .about-link {
+  border: 1px solid $gray-300;
+  color: $gray-700;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+}
+
+.about-links .about-link:hover {
+  background-color: $terracotta;
+  border-color: $terracotta;
+  color: $white !important;
+}
+
+// Generic content width / breathing room
+.content {
+  padding-top: 0.5em;
+}
+
+p {
+  color: $gray-800;
+}
+
+// ---- Custom components used on Research / Teaching / CV pages ----
+
+.tagline {
+  font-family: $font-family-serif;
+  font-style: italic;
+  color: $gray-600;
+  font-size: 1.15em;
+  margin-top: -0.3em;
+  margin-bottom: 1.4em;
+}
+
+.research-card {
+  background-color: $white;
+  border: 1px solid $gray-300;
+  border-left: 4px solid $terracotta;
+  border-radius: 6px;
+  padding: 1.4em 1.6em;
+  margin-bottom: 1.6em;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.research-card:hover {
+  box-shadow: 0 6px 20px rgba(74, 63, 53, 0.12);
+  transform: translateY(-2px);
+}
+
+.research-card .status-tag {
+  display: inline-block;
+  font-family: $font-family-sans;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $terracotta-dark;
+  background-color: rgba($terracotta, 0.12);
+  border-radius: 999px;
+  padding: 0.25em 0.8em;
+  margin-bottom: 0.7em;
+}
+
+.research-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.15em;
+}
+
+.research-card p {
+  color: $gray-700;
+  margin-bottom: 0.6em;
+}
+
+.research-card .paper-links a {
+  font-family: $font-family-sans;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-right: 1.2em;
+}
+
+.teaching-block {
+  background-color: $white;
+  border: 1px solid $gray-300;
+  border-radius: 6px;
+  padding: 1.4em 1.6em;
+  margin-bottom: 1.4em;
+}
+
+.teaching-block h4 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+
+.teaching-block .meta {
+  color: $gray-600;
+  font-size: 0.92em;
+  margin-bottom: 0.8em;
+}
+
+.teaching-block .evals a {
+  font-weight: 600;
+}
+
+.teaching-block blockquote {
+  border-left: 3px solid $terracotta-light;
+  margin: 1em 0;
+  padding: 0.3em 0 0.3em 1.2em;
+  font-style: italic;
+  color: $gray-700;
+}
+
+.cv-frame {
+  border: 1px solid $gray-300;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(74, 63, 53, 0.10);
+  margin-top: 1em;
+}
+
+.cv-frame iframe {
+  display: block;
+  border: none;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: $terracotta;
+  color: $white !important;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  border-radius: 999px;
+  margin-bottom: 1em;
+  transition: background-color 0.15s ease;
+}
+
+.btn-download:hover {
+  background-color: $terracotta-dark;
+  text-decoration: none !important;
+}
+
+// Footer
 .nav-footer {
-    align-items: flex-start;  // Align all flex items to the top
+    align-items: flex-start;
     flex-wrap: wrap;
     border: 0 !important;
+    border-top: 1px solid $gray-300 !important;
     min-height: 3em;
-    //font-family: $footer-font-family;
+    font-family: $font-family-sans;
+    font-size: 0.85em;
+    color: $gray-600;
 
     a {
-        color: $primary;
+        color: $gray-700;
+    }
+
+    a:hover {
+        color: $terracotta;
     }
 
     .faux-block {
@@ -106,9 +329,6 @@ $btn-code-copy-color-active: $orange !default;
         padding-bottom: 0.4em;
     }
 
-    // In the default Quarto template, .nav-footer-center has position: absolute 
-    // turned on, which makes the div not be a flex item
-    // This changes that so that it *is* a flex item
     .nav-footer-center {
         text-align: center;
         position: inherit;
@@ -120,8 +340,6 @@ $btn-code-copy-color-active: $orange !default;
         }
     }
 
-    // When the screen is medium or smaller, make each footer chunk be 100% width 
-    // and centered; otherwise make them be 33% width and left/right/centerd
     .nav-footer-left,
     .nav-footer-right,
     .nav-footer-center {

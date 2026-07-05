@@ -1,0 +1,41 @@
+# Teaching
+
+## Teaching Assistant
+
+::: {.teaching-block}
+#### Microeconomics I (General Equilibrium), Bocconi University
+
+<div class="meta">Fall 2024, 2025</div>
+
+PhD course taught by [Alfredo di Tillio](https://faculty.unibocconi.eu/alfredoditillio/).
+:::
+
+::: {.teaching-block}
+#### Social and Economic Networks, Bocconi University
+
+<div class="meta">Spring 2025</div>
+
+Master course taught by [Fernando Vega-Redondo](https://faculty.unibocconi.it/fernandovega-redondo/).
+:::
+
+::: {.teaching-block}
+#### Introduction to Economic Reasoning, Barnard College
+
+<div class="meta">Fall 2022, Spring 2023</div>
+
+Undergraduate course taught by [Rajiv Sethi](http://www.columbia.edu/~rs328/), following [CORE](https://www.core-econ.org/the-economy/book/text/0-3-contents.html).
+
+<div class="evals">
+Teaching Evaluations: [Fall 2022](ECONBC1003-001-2022-3-INTROTOECONOMICREASONING-MariaBelenHipola.pdf) | [Spring 2023](ECONBC1003-002-2023-1-INTROTOECONOMICREASONING-MariaBelenHipola.pdf)
+</div>
+
+<!--
+Selected comments:
+
+> Belen was amazing! Not only is she clearly very smart, she is kind, cares about the students, and is very accessible. She made me feel like I had someone in my corner in this course. I can't say enough positive things!
+
+> I love Belen. She is the best TA I have ever had. She was very effective in teaching the class material.
+
+> Belen was great! I regularly attend her recitations and office hours and I find she is extremely effective in helping students translate what we learned in class to actual questions we might face. She is super patient and knowledgeable, and I know that has helped so many students actually understand the subject matter.
+-->
+:::

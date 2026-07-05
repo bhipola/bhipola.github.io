@@ -1,9 +1,8 @@
 ---
 about:
-  
   template: trestles
   id: about-block
-  image: "img/my_image2.jpg"
+  image: "img/Sfrw6tr9_400x400.jpg"
   links:
     - icon: twitter
       text: Twitter
@@ -13,20 +12,15 @@ about:
       href: https://www.linkedin.com/in/belenhipola/
     - icon: envelope
       text: Email
-      href: "mailto:maria.hipola@phd.unibocconi.it"  
+      href: "mailto:maria.hipola@phd.unibocconi.it"
 ---
 
+# About me
 
-# About me 
+::: {.tagline}
+PhD Candidate in Economics, Bocconi University
+:::
 
-<body style="font-family: 'Calibri', sans-serif;">
+I am a third-year PhD student in Economics at Bocconi University. I am interested in applied microeconomics, particularly education and labor economics.
 
-I am a second-year PhD student in Economics at Bocconi University. 
-
-I am interested in applied microeconomics, particularly education and development economics. 
-
-Prior to joining Bocconi, I received an MA in Economics from Columbia University, a BA in Economics and a BSc in Mathematics and Statistics from Universidad Complutense de Madrid. 
-
-</body>
-
-
+Prior to joining Bocconi, I received an MA in Economics from Columbia University, a BA in Economics and a BSc in Mathematics and Statistics from Universidad Complutense de Madrid.
