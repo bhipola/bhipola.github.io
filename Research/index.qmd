@@ -3,8 +3,6 @@
 ## Work in Progress
 
 ::: {.research-card}
-<span class="status-tag">Working Paper</span>
-
 #### Negotiating Informality: Bargaining Practices and Preferences of Domestic Workers
 
 <div class="meta">with Irene Solmone</div>
@@ -13,8 +11,6 @@ How do domestic workers value, search for, and bargain for jobs, and how does it
 :::
 
 ::: {.research-card}
-<span class="status-tag">Working Paper</span>
-
 #### Unpacking Grade Retention: Student Behavior and Teacher Beliefs
 :::
 
