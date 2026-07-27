@@ -18,7 +18,7 @@ about:
 # About me
 
 ::: {.tagline}
-PhD Candidate in Economics, Bocconi University
+PhD Student in Economics, Bocconi University
 :::
 
 I am a third-year PhD student in Economics at Bocconi University. I am interested in applied microeconomics, particularly education and labor economics.
