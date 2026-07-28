@@ -14,7 +14,6 @@ about:
       text: Email
       href: "mailto:maria.hipola@phd.unibocconi.it"
 ---
-
 # About me
 
 ::: {.tagline}
